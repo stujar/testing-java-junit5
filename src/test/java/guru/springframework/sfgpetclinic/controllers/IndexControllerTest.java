@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.*;
 
 import java.time.Duration;
 
@@ -69,5 +70,35 @@ class IndexControllerTest {
     void testAssumptinTrue() {
 //        System.out.println(System.getenv());
         assumeTrue("C:\\Users\\hal90\\AppData\\Local".equalsIgnoreCase(System.getenv("LOCALAPPDATA")));
+    }
+
+    @EnabledOnOs(OS.MAC)
+    @Test
+    void testMeOnMacOS() {
+    }
+
+    @EnabledOnOs(OS.WINDOWS)
+    @Test
+    void testMeOnWindows() {
+    }
+
+    @EnabledOnJre(JRE.JAVA_8)
+    @Test
+    void testMeOnJava8() {
+    }
+
+    @EnabledOnJre(JRE.JAVA_11)
+    @Test
+    void testMeOnJava11() {
+    }
+
+    @EnabledIfEnvironmentVariable(named = "USER", matches = "hal90")
+    @Test
+    void testIfUserHal90() {
+    }
+
+    @EnabledIfEnvironmentVariable(named = "USER", matches = "hal")
+    @Test
+    void testIfUserHal() {
     }
 }
