@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 /*
     Author: jalnor
@@ -62,5 +63,11 @@ class IndexControllerTest {
                     Thread.sleep(2000);
                     System.out.println("I got here! (testTimeoutPreemptive())");
                 });
+    }
+
+    @Test
+    void testAssumptinTrue() {
+//        System.out.println(System.getenv());
+        assumeTrue("C:\\Users\\hal90\\AppData\\Local".equalsIgnoreCase(System.getenv("LOCALAPPDATA")));
     }
 }
