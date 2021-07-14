@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
@@ -31,6 +33,7 @@ class OwnerTest {
                         () -> assertEquals("Key West", owner.getCity()),
                         () -> assertEquals("1231231234", owner.getTelephone())
                 ));
+        assertThat(owner.getCity(), is("Key West"));
     }
 
     @AfterEach
