@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.model;
 
+import guru.springframework.sfgpetclinic.ModelTests;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
@@ -14,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
     Date: 7/13/2021 7:32 AM
     Project: guru.springframework.sfgpetclinic.model
 */
-@Tag("model")
-class OwnerTest {
+class OwnerTest implements ModelTests {
 
     Owner owner;
     @BeforeEach

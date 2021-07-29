@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import guru.springframework.sfgpetclinic.ControllerTests;
 import guru.springframework.sfgpetclinic.exceptionhandlers.ValueNotFoundException;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
@@ -15,8 +16,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
     Date: 7/12/2021 5:08 AM
     Project: guru.springframework.sfgpetclinic.controllers
 */
-@Tag("controllers")
-class IndexControllerTest {
+class IndexControllerTest implements ControllerTests {
 
     IndexController indexController;
 
