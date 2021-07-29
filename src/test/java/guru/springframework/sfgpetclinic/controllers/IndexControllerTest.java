@@ -1,10 +1,7 @@
 package guru.springframework.sfgpetclinic.controllers;
 
 import guru.springframework.sfgpetclinic.exceptionhandlers.ValueNotFoundException;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
 
 import java.time.Duration;
@@ -18,6 +15,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
     Date: 7/12/2021 5:08 AM
     Project: guru.springframework.sfgpetclinic.controllers
 */
+@Tag("controllers")
 class IndexControllerTest {
 
     IndexController indexController;
