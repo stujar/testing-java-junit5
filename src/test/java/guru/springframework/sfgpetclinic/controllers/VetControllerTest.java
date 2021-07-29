@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import guru.springframework.sfgpetclinic.ControllerTests;
 import guru.springframework.sfgpetclinic.fauxspring.Model;
 import guru.springframework.sfgpetclinic.fauxspring.ModelAndView;
 import guru.springframework.sfgpetclinic.model.Speciality;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
     Date: 7/21/2021 9:43 PM
     Project: guru.springframework.sfgpetclinic.controllers
 */
-class VetControllerTest {
+class VetControllerTest implements ControllerTests {
 
     // Declare Service Maps
     SpecialityMapService specialityMapService;
