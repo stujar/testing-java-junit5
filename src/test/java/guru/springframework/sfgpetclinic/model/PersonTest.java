@@ -39,7 +39,6 @@ class PersonTest implements ModelTests {
 
     @RepeatedTest(value = 10, name = "{displayName} : {currentRepetition} of {totalRepetitions}")
     @DisplayName("My Repeated Test")
-    @Test
     void myRepeatedTest() {
         // TODO - impl
     }
