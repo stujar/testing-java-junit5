@@ -3,7 +3,10 @@ package guru.springframework.sfgpetclinic.model;
 import guru.springframework.sfgpetclinic.ModelTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -36,6 +39,13 @@ class OwnerTest implements ModelTest {
                         () -> assertEquals("1231231234", owner.getTelephone())
                 ));
         assertThat(owner.getCity(), is("Key West"));
+    }
+
+    @DisplayName("Value Source Test")
+    @ParameterizedTest(name = "{displayName} - {index}] {arguments}")
+    @ValueSource(strings = {"Spring", "Framework", "Guru"})
+    void testValueSource(String val) {
+        System.out.println(val);
     }
 
     @AfterEach
