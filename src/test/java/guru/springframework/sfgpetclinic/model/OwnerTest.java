@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -48,75 +49,15 @@ class OwnerTest implements ModelTest {
         System.out.println(val);
     }
 
+    @DisplayName("Enum Source Test")
+    @ParameterizedTest(name = "{displayName} - {index}] {arguments}")
+    @EnumSource(OwnerType.class)
+    void enumTest(OwnerType ownerType) {
+        System.out.println(ownerType);
+    }
+
     @AfterEach
     void tearDown() {
     }
 
-    @Test
-    void getFirstName() {
-    }
-
-    @Test
-    void setFirstName() {
-    }
-
-    @Test
-    void getLastName() {
-    }
-
-    @Test
-    void setLastName() {
-    }
-
-    @Test
-    void isNew() {
-    }
-
-    @Test
-    void getId() {
-    }
-
-    @Test
-    void setId() {
-    }
-
-    @Test
-    void getPet() {
-    }
-
-    @Test
-    void testGetPet() {
-    }
-
-    @Test
-    void getAddress() {
-    }
-
-    @Test
-    void setAddress() {
-    }
-
-    @Test
-    void getCity() {
-    }
-
-    @Test
-    void setCity() {
-    }
-
-    @Test
-    void getTelephone() {
-    }
-
-    @Test
-    void setTelephone() {
-    }
-
-    @Test
-    void getPets() {
-    }
-
-    @Test
-    void setPets() {
-    }
 }
